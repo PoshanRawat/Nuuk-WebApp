@@ -61,6 +61,7 @@ i{
     background-image: linear-gradient(76deg, #c1c3ccd4 35%, #c1c3cc47 65%), url(pic1.jpg);    background-size: 100% 962px;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    position: relative;
 }
 .nav{
     margin: 0px auto;
@@ -126,8 +127,8 @@ i{
 /* overlay header cards */
 .overlay_icons{
     background-color:  #16152e;
-    right: 39px;
-    bottom: 246px;
+    right: 0px;
+    bottom: 179px;
     width: 62px;
     display: flex;
     position: absolute;
@@ -136,6 +137,7 @@ i{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    transition: 0.5s;
 }
 .overlay_icons div{
     border-bottom: 1px solid white;
@@ -147,9 +149,9 @@ i{
     width: 51px;
 }
 .overlay_header_cards{
-    right: 0;
+    right: -38px;
     padding: 56px;
-    bottom: -4px;
+    bottom: -70px;
     display: flex;
     position: absolute;
     flex-direction: row;
@@ -164,6 +166,7 @@ i{
 .header_content{
     margin: 94px 102px 102px 139px;
     color: white;
+    transition: 0.5s;
 }
 .header_content h1{
     font-size: 49px;
@@ -187,61 +190,13 @@ input{
     
 }
 /* responsive header */
-@media screen and (max-width: 400px){
-    .overlay_header_cards{
-        display: none;
-    }
-    .h2_header{
-        display: none;
-    }
-    .header{
-        height: 513px;
-        background-image: linear-gradient(76deg, #c1c3ccd4 5%, #c1c3cc47 71%), url(pic1.jpg);  
-        background-size: 400px 506px;
-    }
-    .overlay_icons{
-        right: 0;
-        bottom: -68px;
-    }
-    .menu_item {
-        display: none;
-    }
-    .quote{
-        display: none;
-    }
-    .nav{
-        margin-top: -26px;
-        height: 82px;
-        width: 100%;
-
-    }
-    .header_content{
-        margin: 69px 0px 0px 20px;
-    }
-    .header_content h1{
-        font-size: 35px;
-    }
-    .header_content p{
-        font-size: 14px;
-    }
-    .logo{
-        justify-content: center;
-        display: flex;
-        width: 129px;
-        height: 65px;
-    }
-    .logo div {
-        margin-top: 16px;
-    }
+@media screen and (max-width: 425px){
+    
     .page_content{
         margin: 0%;
     }
     body{
         margin: 0px;
-    }
-    .quote1 div{
-        display: flex;
-        
     }
     .sec_header{
         display: flow-root !important;
@@ -257,7 +212,6 @@ input{
     }
     .sec1_cards_container {
         display: flow-root  !important;
-        height: 874px  !important;
         padding: 0px  !important;
     }
     .sec1_cards_2{
@@ -301,9 +255,13 @@ input{
     }
     .test {
         display: inline !important;
+        justify-content: space-around;
     }
     .col_2b{
         margin-top: 26px !important;
+    }
+    .col_2a{
+        width: 100% !important;
     }
     .sec4 {
         padding-bottom: 33px !important;
@@ -323,9 +281,7 @@ input{
         flex-direction: column;
         padding: 0 !important;
     }
-    .row{
-        flex-direction: column;
-    }
+    
     .f_c1,.f_c2,.f_c3{
         width: 90% !important;
     }
@@ -357,14 +313,14 @@ input{
     font-weight: bold !important ;
 }
 .h2_header {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    z-index: -3;
+    /* margin-block-start: 0; */
+    /* margin-block-end: 0; */
+    z-index: 0;
     position: absolute;
     color: #c0b4b41f;
     font-size: 128px;
-    top: 121px;
-    left: 73px;
+    top: -18px;
+    left: -23px;
     font-family: monospace;
 
 }
@@ -378,7 +334,6 @@ input{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 325px;
     padding: 50px 0px 0px 10px;
 
 
@@ -388,6 +343,7 @@ input{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-inline: 10px;
 }
 .sec1_cards div{
     width: 54px;
@@ -414,17 +370,15 @@ input{
     display: flex;
     margin-top: 40px;
     padding-top: 38px;
-    
-
 }
 .sec1_cards_2 img{
-    width: 554px;
-    margin: 36px 77px 43px 35px;
-    height: 379px;
+    width: 100%;
+    height: 100%;
 }
 .wwr_c{
-    padding: 4px 78px 22px 31px;
+    padding: 4px 6px 22px 31px;
     position: relative;
+    width: 50%;
 
 }
 .wwr_c h2{
@@ -479,12 +433,7 @@ input{
     background-color: #f7f8fc;
 }
 .project{
-    z-index: 0;
-    color: #c6c2c21f;
-    font-size: 97px;
-    top: 88px;
-    left: 84px;
-    font-family: 'Dosis', sans-serif;
+    left: -119px !important;
 }
 .img_overlay{
     padding: 0 0% 20px 20px;
@@ -631,6 +580,7 @@ height: 395px;
 /* testimonials */
 .test{
     display: flex;
+    justify-content: space-around;
 }
 .col_1{
     display: flex;
@@ -653,13 +603,13 @@ height: 395px;
     display: flex;
 }
 .col_2a{
-    width: 66%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
 }
 .col_2a_card{
-    padding: 25px 25px 0px 25px;
+    padding: 25px 25px 25px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -667,11 +617,7 @@ height: 395px;
     line-height: 1.5;
 
 }
-
 .col_2b{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     margin-top: 81px;
 }
 .semi{
@@ -889,4 +835,151 @@ li{
     margin: 8px 5px 12px 35px;
     font-size: 13px;
     color: gray;
+}
+
+@media screen and (max-width: 1332px) and (min-width: 0px) {
+    .test{
+        display: flex;
+        flex-direction: column;
+    }
+    .col_1 {
+        display: flex;
+        align-items: center;
+        padding: 40px 0px 23px 45px;
+    }
+    .sec4_cards {
+        flex-wrap: wrap;
+    }
+    .p_cards {
+        width: 44%;
+        margin-top: 30px;
+    }
+    .sec4 {
+        padding-bottom: 40px;
+    }
+}
+@media screen and (max-width: 1016px) {
+    .overlay_header_cards{
+        display: none;
+    }
+    .overlay_icons {
+        bottom: 0;
+        transition: 0.5s;
+    }
+    .sec_header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .logo2 {
+        flex-direction: column;
+    }
+    .sec1_cards_container{
+        flex-wrap: wrap;
+    }
+    .header_content {
+        margin: 94px 102px 65px 65px;
+        transition: 0.5s;
+    }
+    .sec1_cards {
+        width: 274px;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .col_1 {
+        justify-content: center;
+    }
+    .row{
+        flex-direction: column;
+        padding-left: 20px;
+    }
+    .f_c1, .f_c2, .sec7{
+        width: 100%;
+    }
+    .sec1_cards_2, .sec1_cards_3, .col_2{
+        flex-direction: column;
+        align-items: center;
+    }
+    .img_wwr{
+        width: 90%;
+    }
+    .wwr_c {
+        width: 90%;
+    }
+    .quote1 div{
+        display: flex;
+    }
+    .menu_item,.quote,.h2_header {
+        display: none;
+    }
+    .header{
+        height: 513px;
+        background-image: linear-gradient(76deg, #c1c3ccd4 5%, #c1c3cc47 71%), url(pic1.jpg);  
+        background-size: 100% 100%;
+    }
+    .overlay_icons{
+        right: 0;
+        bottom: 0;
+    }
+    .nav{
+        margin-top: -26px;
+        height: 82px;
+        width: 100%;
+
+    }
+    .header_content{
+        margin: 69px 0px 0px 20px;
+    }
+    .header_content h1{
+        font-size: 35px;
+    }
+    .header_content p{
+        font-size: 14px;
+    }
+    .logo{
+        justify-content: center;
+        display: flex;
+        width: 129px;
+        height: 65px;
+    }
+    .logo div {
+        margin-top: 16px;
+    }
+    .sec1_cards {
+        width: 80%;
+    }
+    .sec1_con {
+        padding: 7% 3% 0% 3%;
+        margin: 0;
+    }
+    .sec_header h3 , .fun_text, .page_content, body{
+        margin: 0;
+    }
+    .sec1_cards_container {
+        padding: 0;
+    }
+    .sec1_cards_3 {
+        margin: 0px 179px 36px 36px;
+    }
+    .sec6_cards_con {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .sec6_cards_con{
+        width: 100%;
+    }
+    .sec6_cards{
+        flex-wrap: wrap;
+    }
+    .sec3_container{
+        text-align: center;
+    }
+    footer {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 70px;
+        padding-right: 0px;
+        padding-left: 0;
+    }
 }
