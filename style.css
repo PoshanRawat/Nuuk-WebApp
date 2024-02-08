@@ -191,7 +191,9 @@ input{
 }
 /* responsive header */
 @media screen and (max-width: 425px){
-    
+    .sec5_div {
+        width: 100%;
+    }
     .page_content{
         margin: 0%;
     }
